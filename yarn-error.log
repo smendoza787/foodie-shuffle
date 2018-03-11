@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\mendozse\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install express
+  C:\Program Files\nodejs\node.exe C:\Users\mendozse\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js dev
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\mendozse\bin;C:\Program Files\Docker\Docker\Resources\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\nodejs;C:\Program Files\Amazon\AWSCLI;C:\Program Files\PuTTY;C:\Program Files\Git\cmd;C:\Program Files\Apache\maven\bin;C:\Program Files\Junit\junit-4.10.jar;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Users\mendozse\AppData\Local\Microsoft\WindowsApps;C:\Users\mendozse\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin
+  C:\Users\mendozse\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\mendozse\bin;C:\Program Files\Docker\Docker\Resources\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\nodejs;C:\Program Files\Amazon\AWSCLI;C:\Program Files\PuTTY;C:\Program Files\Git\cmd;C:\Program Files\Apache\maven\bin;C:\Program Files\Junit\junit-4.10.jar;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Users\mendozse\AppData\Local\Microsoft\WindowsApps;C:\Users\mendozse\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.5.1
@@ -15,20 +15,21 @@ Platform:
 
 npm manifest: 
   {
-      "name": "lunch-shuffle-express",
-      "version": "1.0.0",
-      "scripts": {
-        "client": "cd client && yarn start",
-        "server": "nodemon server.js",
-        "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
-      },
-      "dependencies": {
-        "express": "^4.16.2"
-      },
-      "devDependencies": {
-        "concurrently": "^3.5.0"
-      }
+    "name": "lunch-shuffle-express",
+    "version": "1.0.0",
+    "scripts": {
+      "client": "cd client && yarn start",
+      "server": "nodemon server.js",
+      "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    },
+    "dependencies": {
+      "body-parser": "^1.18.2",
+      "express": "^4.16.2"
+    },
+    "devDependencies": {
+      "concurrently": "^3.5.0"
     }
+  }
 
 yarn manifest: 
   No manifest
@@ -418,10 +419,17 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
 
 Trace: 
-  Error: `install` has been replaced with `add` to add new dependencies. Run "yarn add express" instead.
-      at new MessageError (C:\Users\mendozse\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
-      at Object.<anonymous> (C:\Users\mendozse\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:21987:13)
-      at Generator.next (<anonymous>)
-      at step (C:\Users\mendozse\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:98:30)
-      at C:\Users\mendozse\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:109:13
-      at <anonymous>
+  Error: Command failed.
+  Exit code: 1
+  Command: C:\WINDOWS\system32\cmd.exe
+  Arguments: /d /s /c concurrently --kill-others-on-fail "yarn server" "yarn client"
+  Directory: C:\Users\mendozse\Desktop\tutorials\lunch-shuffle
+  Output:
+  
+      at ProcessTermError.MessageError (C:\Users\mendozse\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
+      at new ProcessTermError (C:\Users\mendozse\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:226:113)
+      at ChildProcess.<anonymous> (C:\Users\mendozse\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)

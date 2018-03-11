@@ -10,7 +10,7 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.post('/places', (req, res) => {
-    console.log("YOOOOOOOOOOOO");
+    console.log(req.body);
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

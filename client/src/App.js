@@ -30,8 +30,13 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          {this.state.response}
+          {/* this.state.response */}
         </p>
+        <form action="/places" method="POST">
+          <input type="text" placeholder="name" name="name" />
+          <input type="text" placeholder="quote" name="quote" />
+          <input type="submit" />
+        </form>
       </div>
     );
   }
